@@ -8,22 +8,26 @@ const button = document.getElementById("ticket-submit")
 const passengerTypeField = document.getElementById("passenger-type")
 console.log(passengerTypeField);
 
-passengerTypeField.addEventListener('input', () => {
+
+
+passengerAgeField.addEventListener('input', () => {
     let passengerType = '';
     //recupero età passeggero
     const passengerAge = passengerAgeField.value
-
+    //controllo létà del passeggero per modificare il campo del typo
     if (passengerAge < 18) {
         passengerType = 'Minorenne';
-        console.log(passengerType);
-    } if (passengerAge > 65) {
+
+    } else if (passengerAge > 65) {
         passengerType = 'Over 65';
-        console.log(passengerType);
+
     } else {
         passengerType = 'Maggiorenne';
-        console.log(passengerType);
+
     }
 
+    //modifico il valore value del campo 
+    passengerTypeField.value = passengerType;
 
 })
 
