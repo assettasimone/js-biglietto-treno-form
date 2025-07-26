@@ -2,7 +2,7 @@
 const tripKmField = document.getElementById("trip-km");
 const passengerAgeField = document.getElementById("passenger-age");
 //pulsante
-const button = document.getElementById("ticket-submit")
+const fomrEl = document.querySelector("form")
 
 //recupero il campo disabilitato per modificarlo dinamicamente all'inserimento dell'età
 const passengerTypeField = document.getElementById("passenger-type")
@@ -29,7 +29,7 @@ passengerAgeField.addEventListener('input', () => {
 
 
 //aspetto che il pulsante viene premuto
-button.addEventListener('click', (e) => {
+fomrEl.addEventListener('submit', (e) => {
     //previene il caricamento della pagina al submit
     e.preventDefault();
 
